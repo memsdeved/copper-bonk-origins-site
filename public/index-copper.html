@@ -1,0 +1,927 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copper: Origins of Bonk | $COPPER</title>
+    <meta name="description" content="Discover the truth: The Bonk Dog was never Cheems, it was always Copper. Join the meme revolution on Solana.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --copper: #b87333;
+            --copper-light: #d59863;
+            --copper-dark: #8c5618;
+            --copper-accent: #ffa500;
+            --background: #fef7e8;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23b87333' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Nav Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(184, 115, 51, 0.2);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .logo-text {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--copper);
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 24px;
+            }
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--copper);
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--copper);
+            color: white;
+            border: 2px solid var(--copper-light);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--copper-accent);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--copper);
+            border: 2px solid var(--copper);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(184, 115, 51, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            padding: 120px 0 80px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .blob-1 {
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(255, 165, 0, 0.2);
+            filter: blur(60px);
+        }
+        
+        .blob-2 {
+            position: absolute;
+            right: 33%;
+            bottom: 0;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background-color: rgba(213, 152, 99, 0.1);
+            filter: blur(70px);
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @media (min-width: 992px) {
+            .hero-content {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        
+        .hero-text {
+            flex: 1;
+            margin-bottom: 40px;
+        }
+        
+        @media (min-width: 992px) {
+            .hero-text {
+                margin-bottom: 0;
+            }
+        }
+        
+        .hero-title {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            font-family: 'Impact', sans-serif;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 48px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .hero-title {
+                font-size: 60px;
+            }
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            margin-bottom: 32px;
+            font-family: 'Comic Neue', cursive;
+            color: var(--text-light);
+        }
+        
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 24px;
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .image-container {
+            position: relative;
+        }
+        
+        .glow-effect {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, rgba(255,165,0,0.3) 0%, rgba(255,165,0,0) 70%);
+            opacity: 0.7;
+            animation: pulse 3s infinite alternate;
+        }
+        
+        .copper-circle {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid rgba(184, 115, 51, 0.3);
+            overflow: hidden;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @media (min-width: 768px) {
+            .copper-circle {
+                width: 380px;
+                height: 380px;
+            }
+        }
+        
+        .copper-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(184, 115, 51, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+        }
+        
+        .copper-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Truth Section */
+        .truth-section {
+            padding: 100px 0;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-family: 'Impact', sans-serif;
+        }
+        
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            padding-bottom: 40px;
+            border-left: 2px solid var(--copper);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--copper);
+        }
+        
+        .timeline-content {
+            margin-left: 24px;
+        }
+        
+        .timeline-year {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--copper);
+            margin-bottom: 8px;
+        }
+        
+        .quote {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-left: 4px solid var(--copper);
+            margin: 30px 0;
+            font-style: italic;
+        }
+        
+        .quote-source {
+            font-weight: 500;
+            margin-top: 10px;
+            text-align: right;
+        }
+        
+        /* Why Section */
+        .why-section {
+            padding: 100px 0;
+            background: linear-gradient(111.4deg, rgba(238,113,113,0.1) 1%, rgba(246,215,148,0.1) 58%);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--copper-light);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--copper-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--copper-dark);
+        }
+        
+        /* Token Section */
+        .token-section {
+            padding: 100px 0;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .token-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .token-details {
+            margin-top: 24px;
+        }
+        
+        .token-detail {
+            display: flex;
+            margin-bottom: 16px;
+        }
+        
+        .token-label {
+            min-width: 120px;
+            font-weight: bold;
+        }
+        
+        .token-value {
+            flex: 1;
+            background-color: rgba(184, 115, 51, 0.1);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        
+        .token-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 32px;
+            justify-content: center;
+        }
+        
+        /* Community Section */
+        .community-section {
+            padding: 100px 0;
+            background: linear-gradient(90deg, rgba(255,207,139,0.30) 1.1%, rgba(255,207,139,0.8) 81.3%);
+        }
+        
+        .message-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .message-text {
+            font-size: 20px;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 32px;
+        }
+        
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--copper);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(184, 115, 51, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-inner {
+            padding-bottom: 20px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--copper-dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 32px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+        
+        .shine-text {
+            background: linear-gradient(to right, var(--copper) 0%, var(--copper-accent) 50%, var(--copper-light) 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-circle">C</div>
+                <span class="logo-text">$COPPER</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#truth">The Truth</a>
+                <a href="#why">Why $COPPER</a>
+                <a href="#token">Token Info</a>
+                <a href="#community">Community</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            
+            <a href="#token" class="btn btn-primary">Buy $COPPER</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="blob-1"></div>
+            <div class="blob-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">THE BONK DOG WAS <span class="shine-text">NEVER CHEEMS...</span></h1>
+                    <h2 class="hero-subtitle">Meet Copper — the Shiba who ate a scorpion and became legend.</h2>
+                    <div class="hero-buttons">
+                        <a href="#token" class="btn btn-primary">Buy $COPPER</a>
+                        <a href="#community" class="btn btn-outline">Join Community</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="glow-effect"></div>
+                        <div class="copper-circle">
+                            <div class="copper-gradient"></div>
+                            <img src="https://place-hold.it/400x400/b87333/ffffff&text=COPPER" alt="Copper the legendary Shiba" class="copper-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Truth Section -->
+    <section id="truth" class="truth-section">
+        <div class="container">
+            <h2 class="section-title"><span class="shine-text">THE TRUTH</span> UNCOVERED</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2016 — The Beginning</h3>
+                        <p>A young Shiba named Copper encounters a scorpion in her backyard.
+                        Curiosity gets the better of her, and she gets stung. The first meme is born.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2017 — The Viral Moment</h3>
+                        <p>A photo of the swollen-faced Copper, with her characteristic squint, goes viral on Tumblr under "Doge got stung by a scorpion."</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2019 — The Mistake</h3>
+                        <p>A meme creator misidentifies Copper as "Cheems," creating confusion in the meme community.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2022 — Bonk Emerges</h3>
+                        <p>The swollen-faced Shiba image becomes the icon for Bonk, but her real identity remains obscured.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2025 — Today</h3>
+                        <p>We reclaim Copper's rightful place in meme history with $COPPER token.</p>
+                        
+                        <div class="quote">
+                            "After extensive research, we can confirm that the original 'Cheems' meme was actually based on a Shiba Inu named Copper who was stung by a scorpion in 2016."
+                            <div class="quote-source">— KnowYourMeme Research Team</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Section -->
+    <section id="why" class="why-section">
+        <div class="container">
+            <h2 class="section-title">WHY <span class="shine-text">$COPPER</span>?</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">It's meme history on-chain</h3>
+                    <p>We're not just another dog coin. We're preserving crypto culture and setting the record straight.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Cheems was a cover story</h3>
+                    <p>Copper is the truth. The original Bonk. The OG swollen doge that launched a thousand memes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Low cap, high vibes</h3>
+                    <p>Get in early on the true original. Community-driven with no VC backing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Built on Solana</h3>
+                    <p>Lightning fast transactions, minimal fees, and maximum meme potential.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👪</div>
+                    <h3 class="feature-title">Community owned</h3>
+                    <p>No team tokens, no insiders. Just a group of meme archaeologists on a mission.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3 class="feature-title">For the culture</h3>
+                    <p>Join us in giving Copper the legacy she deserves. For the memes. For history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Token Info Section -->
+    <section id="token" class="token-section">
+        <div class="container">
+            <h2 class="section-title">TOKEN <span class="shine-text">INFO</span></h2>
+            
+            <div class="token-container">
+                <div class="token-details">
+                    <div class="token-detail">
+                        <div class="token-label">Token:</div>
+                        <div class="token-value">$COPPER</div>
+                    </div>
+                    
+                    <div class="token-detail">
+                        <div class="token-label">Network:</div>
+                        <div class="token-value">Solana</div>
+                    </div>
+                    
+                    <div class="token-detail">
+                        <div class="token-label">Address:</div>
+                        <div class="token-value">Cft3gDDE72M833wN1C6rZgJLjse1X2EXMUgXVVfcbonk</div>
+                    </div>
+                    
+                    <div class="token-detail">
+                        <div class="token-label">Total Supply:</div>
+                        <div class="token-value">1,000,000,000 $COPPER</div>
+                    </div>
+                </div>
+                
+                <div class="token-buttons">
+                    <a href="https://letsbonk.fun" target="_blank" class="btn btn-primary">Trade on LetsBonk</a>
+                    <a href="https://solscan.io/token/Cft3gDDE72M833wN1C6rZgJLjse1X2EXMUgXVVfcbonk" target="_blank" class="btn btn-outline">View on Solscan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Community Section -->
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2 class="section-title">JOIN THE <span class="shine-text">COMMUNITY</span></h2>
+            
+            <div class="message-card">
+                <p class="message-text">"We tried to contact Bonk core. They ignored us."</p>
+                <p class="message-text">"So we minted Copper ourselves."</p>
+                <p class="message-text">"Let's give her the legacy she deserves."</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">𝕏</a>
+                    <a href="#" class="social-link">T</a>
+                    <a href="#" class="social-link">D</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">FREQUENTLY <span class="shine-text">ASKED QUESTIONS</span></h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is this a joke?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-inner">
+                            Yes. And also no. We're serious about the meme archaeology, but we're here for fun.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Copper real?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-inner">
+                            Yes. She's on Tumblr, stung but unbroken. The original photo that launched a thousand memes.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is this official Bonk?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-inner">
+                            It's the original Bonk. We're reclaiming Copper's rightful place in meme history.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the tokenomics?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-inner">
+                            1 billion total supply. No team tokens. 100% fair launch. 2% tax to fund community activities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">$COPPER</div>
+            <p>Origins of Bonk</p>
+            
+            <div class="footer-links">
+                <a href="#truth">The Truth</a>
+                <a href="#why">Why $COPPER</a>
+                <a href="#token">Token Info</a>
+                <a href="#community">Community</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            
+            <div class="copyright">© 2025 Copper: Origins of Bonk. All rights reserved.</div>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                    const toggle = faqItem.querySelector('.faq-toggle');
+                    toggle.textContent = '+';
+                });
+                
+                // If it wasn't active before, activate it
+                if (!isActive) {
+                    item.classList.add('active');
+                    const toggle = item.querySelector('.faq-toggle');
+                    toggle.textContent = '−';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
