@@ -129,10 +129,10 @@ const Index = () => {
                   by user "didlo" showing their dog named Copper with a swollen face after being stung by a scorpion.
                 </p>
                 
-                {/* Add the KYM screenshot */}
+                {/* Updated KYM screenshot */}
                 <div className="mt-4 mb-4 mx-auto max-w-lg border-2 border-amber-300 rounded-lg overflow-hidden shadow-lg">
                   <img 
-                    src="/knowyourmeme-copper-update.png" 
+                    src="/lovable-uploads/d560b615-cfa2-4a27-9a5a-82d9b3b2b26a.png" 
                     alt="KnowYourMeme update showing Copper as the true origin of Bonk" 
                     className="w-full"
                   />
