@@ -128,6 +128,19 @@ const Index = () => {
                   acknowledge Copper as the true origin of the Bonk meme, citing the March 24th, 2016 post 
                   by user "didlo" showing their dog named Copper with a swollen face after being stung by a scorpion.
                 </p>
+                
+                {/* Add the KYM screenshot */}
+                <div className="mt-4 mb-4 mx-auto max-w-lg border-2 border-amber-300 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="/knowyourmeme-copper-update.png" 
+                    alt="KnowYourMeme update showing Copper as the true origin of Bonk" 
+                    className="w-full"
+                  />
+                  <div className="bg-amber-100 p-3 text-sm text-gray-700 italic">
+                    Screenshot: KnowYourMeme acknowledges Copper as Bonk's origin
+                  </div>
+                </div>
+                
                 <div className="mt-4 flex justify-center">
                   <a 
                     href="https://knowyourmeme.com/memes/bonk-cheems" 
