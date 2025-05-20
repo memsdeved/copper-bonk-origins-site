@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -236,7 +235,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Community Callout */}
+      {/* Community Callout - Modified to only show X community */}
       <section id="community" className="py-20 bg-copper/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -256,16 +255,18 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-copper hover:bg-amber-600 text-white">
-                Join Telegram
-              </Button>
-              <Button variant="outline" className="border-copper text-copper">
-                Follow on X
-              </Button>
-              <Button variant="outline" className="border-copper text-copper">
-                Join Discord
-              </Button>
+            <div className="flex justify-center">
+              <a 
+                href="https://x.com/i/communities/1922047164974264701" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex"
+              >
+                <Button className="bg-copper hover:bg-amber-600 text-white flex items-center gap-2">
+                  <X className="h-4 w-4" />
+                  Join X Community
+                </Button>
+              </a>
             </div>
           </div>
         </div>
