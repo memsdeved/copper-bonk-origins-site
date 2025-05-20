@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, X } from 'lucide-react';
+import { ArrowRight, X, ExternalLink } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -108,7 +108,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative pl-10 border-l-2 border-copper">
+            <div className="relative pl-10 pb-10 border-l-2 border-copper">
               <div className="absolute -left-2 w-4 h-4 rounded-full bg-copper"></div>
               <div className="ml-8">
                 <h3 className="text-xl font-bold text-copper">2022 — The Cover-up</h3>
@@ -116,13 +116,37 @@ const Index = () => {
                   As 'Bonk' emerges as a Solana memecoin, history is rewritten.
                   Copper's legacy is obscured, replaced by Cheems.
                 </p>
+              </div>
+            </div>
+            
+            <div className="relative pl-10 border-l-2 border-copper">
+              <div className="absolute -left-2 w-4 h-4 rounded-full bg-copper"></div>
+              <div className="ml-8">
+                <h3 className="text-xl font-bold text-copper">2025 — KYM Confirms the Truth</h3>
+                <p className="text-gray-600 mt-2">
+                  Official confirmation! KnowYourMeme updates their Bonk entry to 
+                  acknowledge Copper as the true origin of the Bonk meme, citing the March 24th, 2016 post 
+                  by user "didlo" showing their dog named Copper with a swollen face after being stung by a scorpion.
+                </p>
                 <div className="mt-4 flex justify-center">
-                  <Button className="bg-copper text-white hover:bg-amber-600">
-                    View Archive Evidence
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <a 
+                    href="https://knowyourmeme.com/memes/bonk-cheems" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-copper hover:underline"
+                  >
+                    Don't believe? Check yourself
+                    <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
                 </div>
               </div>
+            </div>
+            
+            <div className="mt-8 flex justify-center">
+              <Button className="bg-copper text-white hover:bg-amber-600">
+                View Archive Evidence
+                <ArrowRight className="h-4 w-4" />
+              </Button>
             </div>
           </div>
         </div>
