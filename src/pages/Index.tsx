@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -59,13 +60,22 @@ const Index = () => {
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-amber-300/30 rounded-full blur-xl"></div>
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-copper/30 overflow-hidden animate-[bounce_5s_ease-in-out_infinite] relative">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-copper/30 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-copper/20 to-amber-400/20"></div>
                 <img 
-                  src="https://place-hold.it/400x400/b87333/ffffff&text=COPPER" 
-                  alt="Copper the legendary Shiba" 
+                  src="/lovable-uploads/fdb9d5c4-cc75-48e5-854e-bed25b898134.png" 
+                  alt="Copper the legendary Shiba after eating a scorpion" 
                   className="w-full h-full object-cover"
                 />
+                <a 
+                  href="https://didlo.tumblr.com/post/141608769796/she-ate-a-scorpion"
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs py-1 px-2 flex items-center justify-center hover:bg-black/90 transition-colors"
+                >
+                  <span>Original Post</span>
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </a>
               </div>
             </div>
           </div>
