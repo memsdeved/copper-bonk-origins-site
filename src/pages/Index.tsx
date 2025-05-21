@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -59,8 +58,8 @@ const Index = () => {
           
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-amber-300/30 rounded-full blur-xl"></div>
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-copper/30 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-amber-300/30 blur-xl"></div>
+              <div className="relative border-4 border-copper/30 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-copper/20 to-amber-400/20"></div>
                 <img 
                   src="/lovable-uploads/fdb9d5c4-cc75-48e5-854e-bed25b898134.png" 
