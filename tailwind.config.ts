@@ -68,6 +68,14 @@ export default {
 					light: '#d59863',
 					dark: '#8c5618',
 					accent: '#ffa500',
+				},
+				bonk: {
+					DEFAULT: '#9b87f5', // Main purple from bonkcoin
+					light: '#d6bcfa',  // Lighter purple shade
+					dark: '#7e69ab',   // Darker purple shade
+					accent: '#f687b3', // Pink accent
+					background: '#f5f5f7', // Light gray background
+					text: '#1a1f2c',   // Dark text color
 				}
 			},
 			borderRadius: {
