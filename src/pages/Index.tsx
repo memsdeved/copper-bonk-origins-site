@@ -25,7 +25,7 @@ const Index = () => {
             <a href="#faq" className="text-gray-700 hover:text-copper transition-colors">FAQ</a>
           </div>
           
-          <Button className="bg-copper hover:bg-amber-600 text-white">Buy $COPPER</Button>
+          <Button className="bg-copper hover:bg-amber-600 text-white">$COPPER on Letsbonk.fun</Button>
         </div>
       </nav>
 
@@ -48,7 +48,7 @@ const Index = () => {
             
             <div className="flex flex-wrap gap-4">
               <Button className="bg-copper hover:bg-amber-600 text-white" size="lg">
-                Buy $COPPER
+                $COPPER on Letsbonk.fun
               </Button>
               <Button variant="outline" className="border-copper text-copper hover:bg-copper/10" size="lg">
                 Join Community
@@ -253,7 +253,7 @@ const Index = () => {
             
             <div className="flex flex-wrap gap-4 mt-8 justify-center">
               <Button className="bg-copper hover:bg-amber-600 text-white">
-                Buy on letsbonk.fun
+                $COPPER on Letsbonk.fun
               </Button>
               <Button variant="outline" className="border-copper text-copper">
                 View on Solscan
