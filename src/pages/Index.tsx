@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,7 +57,14 @@ const Index = () => {
                 </a>
               </Button>
               <Button variant="outline" className="border-copper text-copper hover:bg-copper/10" size="lg">
-                Join Community
+                <a href="https://x.com/i/communities/1922047164974264701" target="_blank" rel="noopener noreferrer">
+                  Join Community
+                </a>
+              </Button>
+              <Button variant="outline" className="border-copper text-copper hover:bg-copper/10" size="lg">
+                <a href="https://axiom.trade/t/Cft3gDDE72M833wN1C6rZgJLjse1X2EXMUgXVVfcbonk/@ref282828" target="_blank" rel="noopener noreferrer">
+                  Trade with Axiom
+                </a>
               </Button>
             </div>
           </div>
