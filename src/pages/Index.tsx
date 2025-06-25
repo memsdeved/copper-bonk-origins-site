@@ -265,7 +265,9 @@ const Index = () => {
                 </a>
               </Button>
               <Button variant="outline" className="border-copper text-copper">
-                View on Solscan
+                <a href="https://axiom.trade/t/Cft3gDDE72M833wN1C6rZgJLjse1X2EXMUgXVVfcbonk/@ref282828" target="_blank" rel="noopener noreferrer">
+                  Trade with Axiom
+                </a>
               </Button>
             </div>
           </div>
